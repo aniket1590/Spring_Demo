@@ -5,6 +5,9 @@
   <artifactId>Bloggit</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  <properties>
+		<hibernate.version>4.2.15.Final</hibernate.version>
+	</properties>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -52,6 +55,26 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+ 
+		<!-- The tutorials use the PostgreSQL 9.3.5 database -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.3-1102-jdbc41</version>
+		</dependency>
+ 
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>
